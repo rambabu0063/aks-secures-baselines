@@ -46,14 +46,7 @@
             "name": "[variables('routeTableName')]",
             "properties": {
                 "routes": [
-                    {
-                        "name": "r-nexthop-to-fw",
-                        "properties": {
-                            "nextHopType": "VirtualAppliance",
-                            "addressPrefix": "0.0.0.0/0",
-                            "nextHopIpAddress": "[reference(resourceId(variables('hubRgName'), 'Microsoft.Network/azureFirewalls', concat('fw-', parameters('location'), '-hub')), '2019-11-01', 'Full').properties.ipConfigurations[0].properties.privateIpAddress]"
-                        }
-                    }
+                   
                 ]
             }
         },
